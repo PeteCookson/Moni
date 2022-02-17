@@ -1,9 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #525252;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+  --primary-color: #535353;
+  --secondary-color: #ffffff;
+  --font-color: #ffffff;
+  --bg-color: #707070;
+  
+}
+
 body {
+  background-color: var(--primary-color);
   text-align: center;
+}
+h1 {
+  font-family: 'Baloo Tamma 2', 'helvetica';
+  font-size: 10vw;
+  align-items: center;
+  justify-content: center;
+  color: var(--font-color);
+}
+h2{
+  color: var(--font-color);
+}
+p{
+  color: var(--font-color);
+}
+a {
+  color: var(--primary-color);
+}
+.form-control {
+  border-radius: 0;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+::placeholder {
+  color: var(--font-color);
+  opacity: 1; /* Firefox */
 }
 /*Header*/
 .navbar-brand {
   margin: 0;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  }
+  
+  .theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+  }
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #eb9e3b;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /*fa icon*/
@@ -11,110 +114,25 @@ body {
 .fas {
   font-size: 1.2rem;
   color: black;
+  color: var(--secondary-color);
+}
+
+.coin-input { 
+  outline-color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+/* Modal */
+.modal-content {
+  margin: 0 auto;
+  overflow: auto;
+  background: #e7bd61;
+}
+.btn-close {
+  justify: right;
 }
 
 
-/* Toggle Switch */
-/* The switch - the box around the slider 
-.toggle-switch {
-  
-}*/
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 35px;
-  height: 19px;
-}
-
-.heading {
-  font-size: 1.4rem;
-} 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 13px;
-  width: 13px;
-  left: 2px;
-  bottom: 3px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #e7b03a;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #4f4f50;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
-  transform: translateX(18px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 20px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-/* Input form */
-.form-control{
-  text-align: center;
-
-}
-.form-or {
-  padding: 0;
-  color: #e7b03a;
-}
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-/* Modal - Credit Florin Pop Youtube video guide. Walkthrough helped create modal and code was used and modified for project.  */
-.modal-bg {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(0,0,0,0.5);
-}
 /*--------------------------------------------Media Queries*/
 @media screen and (min-width: 768px) {
     
