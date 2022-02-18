@@ -1,31 +1,33 @@
-
-const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-  ];
+/*const labels = [
+    'BTC',
+    'ETH',
+    'BNB',
+    'ADA',
+    'SOL',
+    'LUNA',
+];*/
 
 const data = {
-    labels: labels,
+    labels: ['BTC', 'ETH', 'BNB', 'ADA', 'SOL', 'LUNA'],
     datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
+        label: 'current value',
+        data: [23, 10, 35, 25, 20, 30, ],
+        backgroundColor: [
+            'rgb(242, 169, 0)',
+            'rgb(60, 60, 61)',
+            'rgb(201, 157, 102)',
+            'rgb(85,141,255)',
+            'rgb(220,31,255)',
+            'rgb(13,54,155)',
+        ]
     }]
-  };
+};
 
 const config = {
     type: 'pie',
-    data: {
-        labels: ['BTC', 'ETH', 'BNB', 'SOL', 'ADA', 'LUNA']
-    };
-
+    data: data,
+}
 const myChart = new Chart(
     document.getElementById('myChart'),
     config
-  );
-  
+);
