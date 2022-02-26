@@ -40,7 +40,7 @@ The website can be [found here](https://petecookson.github.io/moni/).
 ![Responsive mockup](/assets/images/mockup.png)
 
 ### Flow Chart 
-![Alt text](assets/images/readme_images/MONI-flowchart.png)
+![Alt text](assets/images/readme_images/moni-flowchart.png)
 
 ## The 5 Planes of User Experience...
 
