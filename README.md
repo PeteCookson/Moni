@@ -10,19 +10,19 @@ The website can be [found here](https://petecookson.github.io/moni/).
 
 ## Table of Contents
 
--   [Objective](#objective)
--   [UX and UI](#ux-and-ui)
-    -   [Site Owner Goals](#site-owner-goals)
-    -   [User Stories](#user-stories)
-    -   [Flow Chart] (#flow-chart)
-    -   [Wireframes](#wireframes)
--   [Design](#design)
-    -   [Log](#logo)
+-   [User Stories](#user-stories)
+    -   [External user goal](#external-user-goal)
+    -   [Returning external user goal](#returning-external-user-goal)
+    -   [Site owner's goal](#site-owner's-goal)
+-   [UX Design](#ux-design)
+    -   [Logo](#logo)
+    -   [Wireframe](#wireframe)
+    -   [Flow Chart](#flowchart)
     -   [Colours](#colours)
     -   [Fonts](#fonts)
     -   [Favicon](#favicon)
 -   [Features](#features)
-    -   [Help Modal](#help-modal)
+    -   [Modal](#modal)
 -   [Deployment](#deployment)
 -   [Testing](#testing)
     -   [Validator Testing](#validator-testing)
@@ -30,4 +30,42 @@ The website can be [found here](https://petecookson.github.io/moni/).
 -   [Credits](#credits)
     -   [Technologies](#technologies)
 
-## Objective
+## User Stories:
+---
+### External user's goal:
+### Returning external user goals:
+### Site owner's goal:
+# UX Design
+
+![Responsive mockup](/assets/images/mockup.png)
+
+### Flow Chart 
+![Alt text](assets/images/readme_images/MONI-flowchart.png)
+
+## The 5 Planes of User Experience...
+
+## Strategy Plane
+---
+## Scope Plane
+---
+## Structure Plane
+---
+## Skeleton Plane
+---
+## Surface Plane
+---
+## Technologies used
+---
+## Resources
+---
+## Testing
+---
+## User Testing
+## Bugs
+## Responsiveness
+## Life Cycle & Further Features
+## User Stories - the outcome....
+### In this development I wanted the new user to:
+## Version Control
+### Git & GitHub
+## Deployment
