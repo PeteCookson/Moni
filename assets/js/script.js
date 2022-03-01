@@ -11,12 +11,55 @@ function getData(cb) {
             cb(JSON.parse(this.responseText));
         }
 
-        document.getElementById('btcnumber').value
     };
 }
-getData(function(data) {
-    console.log(data);
-});
+
+const logCoins = (coin) => {
+    getData(function(data) {
+        console.log(data[coin]);
+    })
+}
+
+logCoins("bitcoin")
+
+// Functions
+
+function coinValue() {
+    let bitcoin = document.getElementById("btcnumber");
+    let ethereum = document.getElementById("ethnumber");
+}
+
+function createChart() {
+
+}
+
+function currentValue() {
+
+}
+
+function totalHoldings() {
+
+}
+
+function totalInvestment() {
+
+}
+
+function totalProfitLoss() {
+
+}
+
+function totalRoi() {
+
+}
+
+function mostProfitable() {
+
+}
+
+function leastProfitable() {
+
+}
 
 /* Chart.js */
 
@@ -86,3 +129,12 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+// Wait for the Dom to finish loading 
+document.addEventListener("DOMContentLoaded", function() {
+    let submit = document.getElementById("calculateButton");
+    calculateButton.addEventListener("click", function() {
+        alert("You clicked submit!");
+    })
+
+})

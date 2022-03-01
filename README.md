@@ -33,8 +33,22 @@ The website can be [found here](https://petecookson.github.io/moni/).
 ## User Stories:
 ---
 ### External user's goal:
+* Quickly understand the main purpose of the site.
+* Navigate easily and 
+* 
+* 
+* 
+* 
+* 
+* 
 ### Returning external user goals:
+* Access the timetable and schedule.
+* 
+* Be able to easily access contact information.
 ### Site owner's goal:
+* Increase the membership of classes to local residents.
+* Grow a following of like-minded yoga people.
+* Develop relationships with the local community and provide relevant content that enriches the u
 # UX Design
 
 ![Responsive mockup](/assets/images/mockup.png)
