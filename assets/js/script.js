@@ -10,7 +10,6 @@ function getData(cb) {
         if (this.readyState == 4 && this.status == 200) {
             cb(JSON.parse(this.responseText));
         }
-
     };
 }
 
@@ -20,13 +19,17 @@ const logCoins = (coin) => {
     })
 }
 
-logCoins("bitcoin")
+logCoins("bitcoin");
+
+// Calling the getUser() function
+
+
 
 // Functions
 
-function coinValue() {
-    let bitcoin = document.getElementById("btcnumber");
-    let ethereum = document.getElementById("ethnumber");
+function calculatecoinValue() {
+    let userInput = parseInt(document.getElementById("btcnumber").value)
+
 }
 
 function createChart() {
@@ -34,6 +37,7 @@ function createChart() {
 }
 
 function currentValue() {
+    document.getElementById("c-v").innerText = userInput * ("bitcoin");
 
 }
 
@@ -68,6 +72,7 @@ const data = {
     datasets: [{
         label: 'current value',
         data: [23, 10, 35, 25, 20, 30, ],
+
         backgroundColor: [
             'rgb(242, 169, 0)',
             'rgb(60, 60, 61)',
@@ -82,7 +87,9 @@ const data = {
 const config = {
     type: 'pie',
     data: data,
-}
+    options: {}
+};
+
 const myChart = new Chart(
     document.getElementById('myChart'),
     config
@@ -94,7 +101,7 @@ const myChart = new Chart(
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("infoBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -134,7 +141,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 document.addEventListener("DOMContentLoaded", function() {
     let submit = document.getElementById("calculateButton");
     calculateButton.addEventListener("click", function() {
-        alert("You clicked submit!");
+        logCoins()
     })
 
 })

@@ -16,22 +16,23 @@
 
 <body class="light-theme">
     <header class="container-fluid">
-        <nav class="navbar row">
-            <div class="navbar-brand col-sm-6">
+        <nav class="navbar">
+            <div class="navbar-brand">
                 <img src="assets/images/logo.webp" alt="Logo for Moni" class="logo">
                 <h1>moni</h1>
+
             </div>
-            <div class="toggler col-sm-6">
-                <!--Toggle switch-->
-                <div class="theme-switch-wrapper">
-                    <i class="fas fa-solid fa-sun pe-1"></i>
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                    </label>
-                    <i class="fas fa-solid fa-moon ps-1"></i>
-                </div>
+            <!--Toggle switch-->
+            <div class="theme-switch-wrapper d-flex">
+                <i class="fas fa-solid fa-sun"></i>
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <i class="fas fa-solid fa-moon ps-1"></i>
+
             </div>
+
             <!-- The Modal -->
 
 
@@ -43,17 +44,18 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <span class="close">&times;</span>
-                        <h2>How to use Moni crypto valuation tool</h2>
+                        <h3>How to use Moni crypto valuation tool</h3>
                     </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, explicabo totam hic inventore,
-                        sequi aut debitis distinctio fugiat quod voluptates amet esse. Expedita facilis cumque ad
-                        voluptatibus molestiae quos fugiat!</p>
+                    <p>Moni Cryptocurrency Valuation Tool gives a real time view of your crypto assets.</p>
+                    <li>Select and enter the relevant cryptocurrency holdings you own.</li>
+                    <li>Once you have entered all your cryptocurrency holdings to 8 decimal places, press calculate.</li>
+                    <li>The information returned shows the spread of investment and real time current value.</li>
                 </div>
 
             </div>
         </nav>
         <nav class="row">
-            <div class="heading">
+            <div class="heading p-0">
                 <h2>
                     CRYPTOCURRENCY PORTFOLIO VALUATION TOOL
                 </h2>
@@ -62,7 +64,7 @@
     </header>
 
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn"><i class="fas fa-solid fa-info"></i></button>
+    <button id="infoBtn"><i class="fas fa-solid fa-info"></i></button>
 
     <div class="container px-5">
         <div class="row">
@@ -71,7 +73,7 @@
                 <div id="accordion">
                     <div class="card coin-input">
                         <a class="collapsed btn" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><img src="assets/images/Bitcoin.webp" alt="Bitcoin Logo" style="width: 30px"></a>
-                        <h3>BITCOIN</h3>
+                        <h4>BITCOIN</h4>
                         <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
                                 <!--<form>
@@ -94,7 +96,7 @@
 
                     <div class="card coin-input">
                         <a class="collapsed btn" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><img src="assets/images/ethereum.webp" alt="Ethereum Logo" style="width: 30px">
-                            <p>ETHEREUM</p>
+                            <h4>ETHEREUM</h4>
                         </a>
                         <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
@@ -118,7 +120,7 @@
 
                     <div class="card coin-input">
                         <a class="collapsed btn" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><img src="assets/images/binance.webp" alt="Binance Logo" style="width: 30px">
-                            <p>BINANCE</p>
+                            <h4>BINANCE</h4>
                         </a>
 
 
@@ -145,7 +147,7 @@
                     <div class="card coin-input">
 
                         <a class="collapsed btn" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><img src="assets/images/Cardano.webp" alt="Cardano Logo" style="width: 30px">
-                            <p>CARDANO</p>
+                            <h4>CARDANO</h4>
                         </a>
 
                         <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
@@ -171,7 +173,7 @@
                     <div class="card coin-input">
 
                         <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFive"><img src="assets/images/solana.webp" alt="Solana Logo" style="width: 30px">
-                            <p>SOLANA</p>
+                            <h4>SOLANA</h4>
                         </a>
 
                         <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
@@ -197,7 +199,7 @@
                     <div class="card coin-input">
 
                         <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseSix"><img src="assets/images/luna.webp" alt="Terra Luna Logo" style="width: 30px">
-                            <p>TERRA LUNA</p>
+                            <h4>TERRA LUNA</h4>
                         </a>
 
                         <div id="collapseSix" class="collapse" data-bs-parent="#accordion">
@@ -222,15 +224,16 @@
                 </div>
                 <button id="calculateButton">Calculate</button>
             </div>
+
             <div class="container  col-sm-6">
                 <canvas id="myChart"></canvas>
-                <p>CURRENT VALUE <span id="c-v"></span></p>
-                <p>TOTAL HOLDINGS<span id="t-h"></span></p>
-                <p>TOTAL INVESTMENT<span id="t-i"></span></p>
-                <p>TOTAL PROFIT / LOSS<span id="t-p-l"></span></p>
-                <p>TOTAL RETURN ON INVESTMENT<span id="t-roi"></span></p>
-                <p>MOST PROFITABLE<span id="m-p"></span></p>
-                <p>LEAST PROFITABLE<span id="l-p"></span></p>
+                <h4>CURRENT VALUE <span id="c-v"></span></h4>
+                <h4>TOTAL HOLDINGS<span id="t-h"></span></h4>
+                <h4>TOTAL INVESTMENT<span id="t-i"></span></h4>
+                <h4>TOTAL PROFIT / LOSS<span id="t-p-l"></span></h4>
+                <h4>TOTAL RETURN ON INVESTMENT<span id="t-roi"></span></h4>
+                <h4>MOST PROFITABLE<span id="m-p"></span></h4>
+                <h4>LEAST PROFITABLE<span id="l-p"></span></h4>
             </div>
         </div>
 
