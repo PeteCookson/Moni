@@ -1,6 +1,6 @@
 /* Main api */
 
-function getData(cb) {
+/*function getData(cb) {
     var xhr = new XMLHttpRequest();
 
     xhr.open("GET", "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinancecoin%2Ccardano%2Csolana%2Cterra-luna&vs_currencies=usd");
@@ -19,25 +19,61 @@ const logCoins = (coin) => {
     })
 }
 
-logCoins("bitcoin");
-
-// Calling the getUser() function
+logCoins("bitcoin");*/
 
 
+const api_url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinancecoin%2Ccardano%2Csolana%2Cterra-luna&vs_currencies=usd";
+async function getData() {
+    const response = await fetch(
+        api_url
+    );
+    const jsonData = await response.json();
+    return jsonData;
+
+}
 
 // Functions
 
-function calculatecoinValue() {
-    let userInput = parseInt(document.getElementById("btcnumber").value)
+async function coinValue() {
+    let coinData = await getData();
+    let bitcoin = parseInt(document.getElementById("btcnumber").value * coinData.bitcoin.usd);
+    //document.getElementById("current-value").innerText = bitcoin.toFixed(2);
+    let ethereum = parseInt(document.getElementById("ethnumber").value * coinData.ethereum.usd);
+    let binance = parseInt(document.getElementById("bnbnumber").value * coinData.binancecoin.usd);
+    let cardano = parseInt(document.getElementById("adanumber").value * coinData.cardano.usd);
+    let solana = parseInt(document.getElementById("solnumber").value * coinData.solana.usd);
+    let luna = parseInt(document.getElementById("lunanumber").value * coinData['terra-luna'].usd);
+    document.getElementById("current-value").innerText = (bitcoin + ethereum + binance + cardano + solana + luna).toFixed(2);
+    //console.log(coinData['terra-luna']);
+
+
 
 }
+
+// Wait for the Dom to finish loading 
+document.addEventListener("DOMContentLoaded", function() {
+    let submit = document.getElementById("calculateButton");
+    submit.addEventListener("click", function() {
+        coinValue()
+    })
+
+})
+
+function getCoins(obj) {
+    var coinNames = [];
+
+    Object.coins(obj).forEach(function(coin) {
+        coinNames.push
+    })
+}
+
 
 function createChart() {
 
 }
 
 function currentValue() {
-    document.getElementById("c-v").innerText = userInput * ("bitcoin");
+    document.getElementById("c-v").innerText = userInput * logCoins;
 
 }
 
@@ -71,7 +107,7 @@ const data = {
     labels: ['BTC', 'ETH', 'BNB', 'ADA', 'SOL', 'LUNA'],
     datasets: [{
         label: 'current value',
-        data: [23, 10, 35, 25, 20, 30, ],
+        data: [73, 10, 35, 25, 20, 30, ],
 
         backgroundColor: [
             'rgb(242, 169, 0)',
@@ -136,12 +172,3 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
-
-// Wait for the Dom to finish loading 
-document.addEventListener("DOMContentLoaded", function() {
-    let submit = document.getElementById("calculateButton");
-    calculateButton.addEventListener("click", function() {
-        logCoins()
-    })
-
-})
