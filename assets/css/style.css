@@ -98,10 +98,14 @@ li {
     border-color: var(--secondary-color);
 }
 
+.form-control {
+    border: 1px solid;
+    border-radius: 0.25rem;
+}
+
 .form-control::placeholder {
     color: var(--font-color);
     opacity: 1;
-    /* Firefox */
 }
 
 .coin-input {
@@ -188,7 +192,7 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-#c-v {
+#current-value {
     color: #f2a900;
 }
 
@@ -276,10 +280,17 @@ input:checked+.slider:before {
 #calculateButton {
     padding: 10px;
     border: 0;
+    border-radius: 0.25rem;
     background-color: #f5cf54;
     width: 100%;
+
 }
 
 
 /*--------------------------------------------Media Queries*/
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    body {
+        width: 920px;
+        margin: auto;
+    }
+}
