@@ -2,7 +2,7 @@
 
 ![Moni - Am I Responsive Image](assets/images/readme_images/full-logo.webp)
 
-# Cryptocurrency portfolio valuation tool
+# Cryptocurrency Portfolio Valuation Tool
 
 This website was designed and created for the Interactive Frontend Development Milestone Project, for Code Institute's Diploma in Web Application Development. 
 
@@ -11,75 +11,100 @@ The website can be [found here](https://petecookson.github.io/moni/).
 ## Table of Contents
 
 -   [User Stories](#user-stories)
-    -   [External user goal](#external-user-goal)
-    -   [Returning external user goal](#returning-external-user-goal)
-    -   [Site owner's goal](#site-owner's-goal)
--   [UX Design](#ux-design)
-    -   [Logo](#logo)
-    -   [Wireframe](#wireframe)
-    -   [Flow Chart](#flowchart)
-    -   [Colours](#colours)
-    -   [Fonts](#fonts)
-    -   [Favicon](#favicon)
--   [Features](#features)
-    -   [Modal](#modal)
--   [Deployment](#deployment)
+    -   [External user goals](#external-user-goals)
+    -   [Returning external user goals](#returning-external-user-goals)
+    -   [Site owner goals](#site-owner-goals)
+-   [The 5 Planes of User Experience...](#5-planes)
+    -   [Strategy Plane](#strategy-plane)
+    -   [Scope Plane](#scope-plane)
+    -   [Structure Plane](#structure-plane)
+    -   [Skeleton Plane](#skeleton-plane)
+    -   [Surface Plane](#surface-plane)
+-   [Technologies Used](#technologies-used)
+-   [Resources](#resources)
 -   [Testing](#testing)
-    -   [Validator Testing](#validator-testing)
-    -   [Manual Testing](#validator-testing)
+-   [Bugs](#bugs)
+-   [Responsiveness](#responsiveness)
+-   [Life Cycle & Further Features](#life-cycle-&-further-features)
+-   [User Stories - the outcome...](#user-stories---the-outcome...)
+-   [Version Control](#version-control)
+-   [Deployment](#deployment)
 -   [Credits](#credits)
-    -   [Technologies](#technologies)
 
-## User Stories:
----
-### External user's goal:
+# User Stories:
+
+### External user goals:
 * Quickly understand the main purpose of the site.
-* Navigate easily and 
-* 
-* 
-* 
-* 
-* 
-* 
+* Navigate easily and identify relevant assets.
+* Easily input data and return real time values of cryptocurrencies.
+* To view a quick and simple visualisation of the value of current assets.
 ### Returning external user goals:
-* Access the timetable and schedule.
-* 
+* Access real time cryptocurency values.
+* Quickly access personal portfolio valuation.
 * Be able to easily access contact information.
-### Site owner's goal:
-* Increase the membership of classes to local residents.
-* Grow a following of like-minded yoga people.
-* Develop relationships with the local community and provide relevant content that enriches the u
-# UX Design
+### Site owner goals:
+* Increase the useability and understanding of crypto assets.
+* Grow a following of users for further rollout of features.
+* Develop further calculations to assist the user gaining information.
 
-![Responsive mockup](/assets/images/mockup.png)
-
-### Flow Chart 
-![Alt text](assets/images/readme_images/moni-flowchart.png)
-
-## The 5 Planes of User Experience...
+# The 5 Planes of User Experience...
 
 ## Strategy Plane
 ---
+### Flow Chart 
+![Flow Chart](assets/images/readme_images/moni-flowchart.png)
 ## Scope Plane
 ---
 ## Structure Plane
 ---
 ## Skeleton Plane
 ---
+![Wireframe](assets/images/readme_images/wireframe.webp)
 ## Surface Plane
 ---
+![Responsive mockup](/assets/images/mockup.png)
+* Color palette
+* Fonts
+
 ## Technologies used
 ---
+* [Git](https://git-scm.com/) Version control
+* [GitHub](https://github.com/) Files, documents and deployment of the website
+* [HTML5](https://en.wikipedia.org/wiki/HTML) Markup
+* [CSS3](https://en.wikipedia.org/wiki/CSS) Stylesheet
+* [Bootstrap](https://getbootstrap.com/) Structure and CDN for the website
+* [Google Fonts](https://fonts.google.com/) Fonts
+* [Font Awesome](https://fontawesome.com/) Icons
+* [[adobeXD](https://www.adobe.com/uk/products/xd.html) Logo
+* [Squoosh](https://squoosh.app/) Image optimisation
+* [PNG to WEBP](https://convertio.co) PNG conversion
+
 ## Resources
 ---
+* [Code Institute](https://codeinstitute.net/) 
+* [W3schools](https://www.w3schools.com/)
+* [Stackoverflow](https://stackoverflow.com/)
+* [Slack](https://slack.com/intl/en-gb/)
+* 
+
+### Content
+* [Dark Mode](https://dev.to/)
+* [Modal](https://www.w3schools.com/)
+* [Pricing API](https://coingecko.com/en/api)
+* [Chart](https://www.chartjs.org/)
 ## Testing
 ---
-## User Testing
 ## Bugs
+---
 ## Responsiveness
+---
 ## Life Cycle & Further Features
-## User Stories - the outcome....
-### In this development I wanted the new user to:
+---
+## User Stories - the outcome...
+---
 ## Version Control
-### Git & GitHub
+---
 ## Deployment
+---
+## Credits
+---
