@@ -111,7 +111,7 @@
                                     </div>
                                     <h5>OR</h5>-->
                                     <div class="input-group">
-                                        <input type="ethnumber" class="form-control" placeholder="Number Purchased">
+                                        <input id="ethnumber" type="number" class="form-control" placeholder="Number Purchased">
                                     </div>
                                 </form>
                             </div>
@@ -137,7 +137,7 @@
                                     </div>
                                     <h5>OR</h5>-->
                                     <div class="input-group">
-                                        <input type="number" class="form-control" placeholder="Number Purchased">
+                                        <input id="bnbnumber" type="number" class="form-control" placeholder="Number Purchased">
                                     </div>
                                 </form>
                             </div>
@@ -163,7 +163,7 @@
                                     </div>
                                     <h5>OR</h5>-->
                                     <div class="input-group">
-                                        <input type="number" class="form-control" placeholder="Number Purchased">
+                                        <input id="adanumber" type="number" class="form-control" placeholder="Number Purchased">
                                     </div>
                                 </form>
                             </div>
@@ -189,7 +189,7 @@
                                     </div>
                                     <h5>OR</h5>-->
                                     <div class="input-group">
-                                        <input type="number" class="form-control" placeholder="Number Purchased">
+                                        <input id="solnumber" type="number" class="form-control" placeholder="Number Purchased">
                                     </div>
                                 </form>
                             </div>
@@ -215,25 +215,25 @@
                                     </div>
                                     <h5>OR</h5>-->
                                     <div class="input-group">
-                                        <input type="number" class="form-control" placeholder="Number Purchased">
+                                        <input id="lunanumber" type="number" class="form-control" placeholder="Number Purchased">
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button id="calculateButton">Calculate</button>
+                <button id="calculateButton" onclick=coinValue()>Calculate</button>
             </div>
 
             <div class="container  col-sm-6">
                 <canvas id="myChart"></canvas>
-                <h4>CURRENT VALUE <span id="c-v"></span></h4>
-                <h4>TOTAL HOLDINGS<span id="t-h"></span></h4>
-                <h4>TOTAL INVESTMENT<span id="t-i"></span></h4>
-                <h4>TOTAL PROFIT / LOSS<span id="t-p-l"></span></h4>
-                <h4>TOTAL RETURN ON INVESTMENT<span id="t-roi"></span></h4>
-                <h4>MOST PROFITABLE<span id="m-p"></span></h4>
-                <h4>LEAST PROFITABLE<span id="l-p"></span></h4>
+                <h4>CURRENT VALUE <span id="current-value"></span></h4>
+                <h4>TOTAL HOLDINGS<span id="total-holdings"></span></h4>
+                <h4>TOTAL INVESTMENT<span id="total-investment"></span></h4>
+                <h4>TOTAL PROFIT / LOSS<span id="total-profit-loss"></span></h4>
+                <h4>TOTAL RETURN ON INVESTMENT<span id="total-roi"></span></h4>
+                <h4>MOST PROFITABLE<span id="most-profitable"></span></h4>
+                <h4>LEAST PROFITABLE<span id="least-profitable"></span></h4>
             </div>
         </div>
 
