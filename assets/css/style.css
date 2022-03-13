@@ -193,6 +193,7 @@ input:checked+.slider:before {
 }
 
 #current-value {
+    font-size: 1.4rem;
     color: #f2a900;
 }
 
@@ -284,6 +285,11 @@ input:checked+.slider:before {
     background-color: #f5cf54;
     width: 100%;
 
+}
+
+.contact-info-email,
+.contact-info-github {
+    padding-bottom: 40px;
 }
 
 
