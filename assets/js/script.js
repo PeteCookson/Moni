@@ -1,27 +1,5 @@
 /* Main api */
 
-/*function getData(cb) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.open("GET", "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinancecoin%2Ccardano%2Csolana%2Cterra-luna&vs_currencies=usd");
-    xhr.send();
-
-    xhr.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            cb(JSON.parse(this.responseText));
-        }
-    };
-}
-
-const logCoins = (coin) => {
-    getData(function(data) {
-        console.log(data[coin]);
-    })
-}
-
-logCoins("bitcoin");*/
-
-
 const api_url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinancecoin%2Ccardano%2Csolana%2Cterra-luna&vs_currencies=usd";
 async function getData() {
     const response = await fetch(
@@ -37,29 +15,72 @@ async function getData() {
 async function coinValue() {
     let coinData = await getData();
     let bitcoin = parseInt(document.getElementById("btcnumber").value * coinData.bitcoin.usd);
-    //document.getElementById("current-value").innerText = bitcoin.toFixed(2);
     let ethereum = parseInt(document.getElementById("ethnumber").value * coinData.ethereum.usd);
     let binance = parseInt(document.getElementById("bnbnumber").value * coinData.binancecoin.usd);
     let cardano = parseInt(document.getElementById("adanumber").value * coinData.cardano.usd);
     let solana = parseInt(document.getElementById("solnumber").value * coinData.solana.usd);
     let luna = parseInt(document.getElementById("lunanumber").value * coinData['terra-luna'].usd);
-    document.getElementById("current-value").innerText = (bitcoin + ethereum + binance + cardano + solana + luna).toFixed(2);
-    //console.log(coinData['terra-luna']);
-
-
-
+    document.getElementById("current-value").innerText = '$' + (bitcoin + ethereum + binance + cardano + solana + luna).toFixed(2);
+    //console.log();
+    /*new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format.("");*/
 }
+
 
 // Wait for the Dom to finish loading 
 document.addEventListener("DOMContentLoaded", function() {
     let submit = document.getElementById("calculateButton");
-    submit.addEventListener("click", function() {
-        coinValue()
+    submit.addEventListener("click", function checkData() {
+        coinValue();
     })
+
 
 })
 
-function getCoins(obj) {
+/* Chart.js */
+
+const data = {
+    labels: ['BITCOIN', 'ETHEREUM', 'BINANCE', 'CARDANO', 'SOLANA', 'LUNA'],
+    datasets: [{
+        label: 'current value',
+        data: [73, 10, 35, 25, 20, 30, ],
+
+        backgroundColor: [
+            'rgb(242, 169, 0)',
+            'rgb(60, 60, 61)',
+            'rgb(201, 157, 102)',
+            'rgb(85,141,255)',
+            'rgb(220,31,255)',
+            'rgb(13,54,155)',
+        ]
+    }]
+};
+
+
+const config = {
+    type: 'pie',
+    data: data,
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        }
+    }
+};
+
+const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+);
+
+
+
+
+
+/*function getCoins(obj) {
     var coinNames = [];
 
     Object.coins(obj).forEach(function(coin) {
@@ -99,37 +120,8 @@ function mostProfitable() {
 
 function leastProfitable() {
 
-}
+}*/
 
-/* Chart.js */
-
-const data = {
-    labels: ['BTC', 'ETH', 'BNB', 'ADA', 'SOL', 'LUNA'],
-    datasets: [{
-        label: 'current value',
-        data: [73, 10, 35, 25, 20, 30, ],
-
-        backgroundColor: [
-            'rgb(242, 169, 0)',
-            'rgb(60, 60, 61)',
-            'rgb(201, 157, 102)',
-            'rgb(85,141,255)',
-            'rgb(220,31,255)',
-            'rgb(13,54,155)',
-        ]
-    }]
-};
-
-const config = {
-    type: 'pie',
-    data: data,
-    options: {}
-};
-
-const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-);
 
 /* Modal */
 
