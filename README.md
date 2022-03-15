@@ -70,13 +70,17 @@ Features included in this Project
 ## Structure Plane
 ---
 The website is built on a single page, having a specific purpose and formatted intuitively.
+Layout of the page is simple and allows immediate interaction, buttons are clearly labelled and returned data 
 
 ## Skeleton Plane
 ---
+The design has been focused on mobile first, while also being responsive to larger screens. The website was designed to allow immediate interaction and to be appropriate to the intended audience.
 [Click here](readme/readme_images/wireframe.webp) to view the Wireframe
 ## Surface Plane
 ---
 [Responsive mockup](/readme/readme_images/mockup.png)
+
+The palette and font used for the site is complementary to the design and uses minimal color and style variations for visual identity.
 * Color palette
 * Fonts
 
@@ -89,7 +93,7 @@ The website is built on a single page, having a specific purpose and formatted i
 * [Bootstrap](https://getbootstrap.com/) Structure and CDN for the website
 * [Google Fonts](https://fonts.google.com/) Fonts
 * [Font Awesome](https://fontawesome.com/) Icons
-* [[adobeXD](https://www.adobe.com/uk/products/xd.html) Logo
+* [[adobeXD](https://www.adobe.com/uk/products/xd.html) Logo design
 * [Squoosh](https://squoosh.app/) Image optimisation
 * [PNG to WEBP](https://convertio.co) PNG conversion
 
@@ -108,6 +112,7 @@ The website is built on a single page, having a specific purpose and formatted i
 * [Chart](https://www.chartjs.org/)
 ## Testing
 ---
+The majority of initial browser testing was done through Chrome Developer Tools and Safari's Inspect Elements.
 ## Bugs
 ---
 ## Responsiveness
@@ -120,9 +125,35 @@ The website is built on a single page, having a specific purpose and formatted i
 
 ## User Stories - the outcome...
 ---
+### In this development I wanted the new user to:
+* Quickly understand the main purpose of the site.
+
+* Navigate easily and identify relevant assets.
+
+* Easily input data and return real time values of cryptocurrencies.
+
+* To view a quick and simple visualisation of the value of current assets.
+
 ## Version Control
 ---
+### Git & GitHub
+
+I used **[GitPod](https://gitpod.io/)** as a local repository and IDE and **[GitHub](https://github.com/)** as a remote repository. The process of version control was:
+
+* First i created a new repository on GitHub 
+* I have then opened that repository on GitPod and started coding
+* In GitPod i have created all the pages and and folders 
+* I was then saving my work and pushing it to GitHub repository to keep it safe
+* The process I used for checking, saving, commiting and pushing it to remote repository is:
+    * `git status` for checking and displaying the state of the repository and staging area
+   * `git add . `  for adding work to git
+    * `git commit -m "Commit message" ` used for saving changes
+    * `git push ` used to upload content to a Github
 ## Deployment
 ---
+To deploy the website on [GitHub](https://github.com/).
+1. Go to **"Settings"** in the repository
+2. In **"Source"** of **"GitHub Pages"**, select **"master** for Branch and click save
+3. The website is now published on GitHub Pages and the link is provided on on the same section
 ## Credits
 ---
