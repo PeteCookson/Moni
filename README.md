@@ -1,12 +1,15 @@
 
 
-![Moni - Am I Responsive Image](assets/images/readme_images/full-logo.webp)
+![Moni - Am I Responsive Image](/readme/readme_images/full-logo.webp)
 
 # Cryptocurrency Portfolio Valuation Tool
 
-This website was designed and created for the Interactive Frontend Development Milestone Project, for Code Institute's Diploma in Web Application Development. 
+This website is designed and created for the Interactive Frontend Development Milestone Project, for Code Institute's Diploma in Web Application Development. 
 
-The website can be [found here](https://petecookson.github.io/moni/).
+Moni - Cryptocurrency Portfolio Valution Tool is a digital currency calculator built to quickly calculate the value of crypto assets.
+
+
+[Enter the site](https://petecookson.github.io/moni/)
 
 ## Table of Contents
 
@@ -50,19 +53,30 @@ The website can be [found here](https://petecookson.github.io/moni/).
 # The 5 Planes of User Experience...
 
 ## Strategy Plane
----
-### Flow Chart 
-![Flow Chart](assets/images/readme_images/moni-flowchart.png)
+--- 
+The website is built with the main aim being to create a clear, simple, and effective way to calculate live cryptocurrency assets; information is clear, intuitive, easy to use.
+
+[Click here](readme/readme_images/moni-flowchart.png) to view the Flow Chart
 ## Scope Plane
 ---
+Features included in this Project
+
+* Direct user input and live crypto prices used for accurate portfolio calculation.
+* Pie chart used to visually represent current holding values.
+* Addtional information based on calculations showing current value, total holdings, R.O.I, most/least profitable, and total profit/loss.
+* Dark mode toggle to reduce eye strain and improve battery life.
+* Information modal provding basic steps to using Moni.
+
 ## Structure Plane
 ---
+The website is built on a single page, having a specific purpose and formatted intuitively.
+
 ## Skeleton Plane
 ---
-![Wireframe](assets/images/readme_images/wireframe.webp)
+[Click here](readme/readme_images/wireframe.webp) to view the Wireframe
 ## Surface Plane
 ---
-![Responsive mockup](/assets/images/mockup.png)
+[Responsive mockup](/readme/readme_images/mockup.png)
 * Color palette
 * Fonts
 
@@ -100,6 +114,10 @@ The website can be [found here](https://petecookson.github.io/moni/).
 ---
 ## Life Cycle & Further Features
 ---
+* Create account to store portfolio information.
+* Add a date purchased and ammount input to further calculate more data including Return on Investment, Profit/Loss, Total Investment.
+* Increase the number of coins available for portfolio calculation.
+
 ## User Stories - the outcome...
 ---
 ## Version Control
