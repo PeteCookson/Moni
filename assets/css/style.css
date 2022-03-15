@@ -279,17 +279,18 @@ input:checked+.slider:before {
 }
 
 #calculateButton {
+    color: #000;
     padding: 10px;
     border: 0;
     border-radius: 0.25rem;
-    background-color: #f5cf54;
+    background-color: #eb9e3b;
     width: 100%;
 
 }
 
 .contact-info-email,
 .contact-info-github {
-    padding-bottom: 40px;
+    padding: 40px;
 }
 
 
@@ -298,5 +299,17 @@ input:checked+.slider:before {
     body {
         width: 920px;
         margin: auto;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    h1 {
+        font-size: 120px;
+    }
+
+    .chart-container {
+        padding: 0;
     }
 }
