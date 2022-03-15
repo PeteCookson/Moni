@@ -1,5 +1,4 @@
 /* Main api */
-
 const api_url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinancecoin%2Ccardano%2Csolana%2Cterra-luna&vs_currencies=usd";
 async function getData() {
     const response = await fetch(
@@ -7,11 +6,9 @@ async function getData() {
     );
     const jsonData = await response.json();
     return jsonData;
-
 }
 
 // Functions
-
 async function coinValue() {
     let coinData = await getData();
     let bitcoin = parseInt(document.getElementById("btcnumber").value * coinData.bitcoin.usd);
@@ -20,32 +17,22 @@ async function coinValue() {
     let cardano = parseInt(document.getElementById("adanumber").value * coinData.cardano.usd);
     let solana = parseInt(document.getElementById("solnumber").value * coinData.solana.usd);
     let luna = parseInt(document.getElementById("lunanumber").value * coinData['terra-luna'].usd);
-    document.getElementById("current-value").innerText = '$' + (bitcoin + ethereum + binance + cardano + solana + luna).toFixed(2);
-    //console.log();
-    /*new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD'
-    }).format.("");*/
+    document.getElementById("current-value").innerText = '$' + (bitcoin + ethereum + binance + cardano + solana + luna).toLocaleString() + '.00 USD';
 }
 
-
 // Wait for the Dom to finish loading 
-document.addEventListener("DOMContentLoaded", function() {
-    let submit = document.getElementById("calculateButton");
-    submit.addEventListener("click", function checkData() {
-        coinValue();
-    })
-
-
+document.addEventListener("DOMContentLoaded", function() {})
+document.getElementById("calculateButton").addEventListener("click", function() {
+    coinValue();
+    updateChart();
 })
 
 /* Chart.js */
-
 const data = {
     labels: ['BITCOIN', 'ETHEREUM', 'BINANCE', 'CARDANO', 'SOLANA', 'LUNA'],
     datasets: [{
         label: 'current value',
-        data: [73, 10, 35, 25, 20, 30, ],
+        data: [coinValue.bitcoin, coinValue.ethereum, 36, 48, 50, 56],
 
         backgroundColor: [
             'rgb(242, 169, 0)',
@@ -58,6 +45,13 @@ const data = {
     }]
 };
 
+function updateChart(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
 
 const config = {
     type: 'pie',
@@ -70,61 +64,12 @@ const config = {
         }
     }
 };
-
-const myChart = new Chart(
-    document.getElementById('myChart'),
+const chart = new Chart(document.getElementById('myChart'),
     config
 );
 
 
-
-
-
-/*function getCoins(obj) {
-    var coinNames = [];
-
-    Object.coins(obj).forEach(function(coin) {
-        coinNames.push
-    })
-}
-
-
-function createChart() {
-
-}
-
-function currentValue() {
-    document.getElementById("c-v").innerText = userInput * logCoins;
-
-}
-
-function totalHoldings() {
-
-}
-
-function totalInvestment() {
-
-}
-
-function totalProfitLoss() {
-
-}
-
-function totalRoi() {
-
-}
-
-function mostProfitable() {
-
-}
-
-function leastProfitable() {
-
-}*/
-
-
-/* Modal */
-
+//Modal 
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -152,7 +97,6 @@ window.onclick = function(event) {
 }
 
 // Toggle
-
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
 function switchTheme(e) {
@@ -164,3 +108,33 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+/*function currentValue() {
+    document.getElementById("c-v").innerText = userInput * logCoins;
+
+}
+
+function totalHoldings() {
+
+}
+
+function totalInvestment() {
+
+}
+
+function totalProfitLoss() {
+
+}
+
+function totalRoi() {
+
+}
+
+function mostProfitable() {
+    
+}
+
+function leastProfitable() {
+
+}*/
