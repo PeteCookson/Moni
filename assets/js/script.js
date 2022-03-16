@@ -1,4 +1,4 @@
-/* Main api */
+//Cryptocurrency API
 const api_url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinancecoin%2Ccardano%2Csolana%2Cterra-luna&vs_currencies=usd";
 async function getData() {
     const response = await fetch(
@@ -21,10 +21,11 @@ async function coinValue() {
 }
 
 // Wait for the Dom to finish loading 
-document.addEventListener("DOMContentLoaded", function() {})
+document.addEventListener("DOMContentLoaded", function() {});
+// 
 document.getElementById("calculateButton").addEventListener("click", function() {
     coinValue();
-    updateChart();
+    updateData();
 })
 
 /* Chart.js */
@@ -32,7 +33,7 @@ const data = {
     labels: ['BITCOIN', 'ETHEREUM', 'BINANCE', 'CARDANO', 'SOLANA', 'LUNA'],
     datasets: [{
         label: 'current value',
-        data: [coinValue.bitcoin, coinValue.ethereum, 36, 48, 50, 56],
+        data: [70, 40, 36, 48, 50, 56],
 
         backgroundColor: [
             'rgb(242, 169, 0)',
@@ -45,13 +46,25 @@ const data = {
     }]
 };
 
-function updateChart(chart, label, data) {
-    chart.data.labels.push(label);
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
-    });
-    chart.update();
+function updateData() {
+    data.data.datasets[0].data = coinValue;
+    data.update();
+
+    /*function addData(chart, label, data) {
+        chart.data.labels.push(label);
+        chart.data.datasets.forEach((dataset) => {
+            dataset.data.push(data);
+        });
+        chart.update();*/
 }
+/*function RandomData() {
+    var newData = [];
+    for (var i = 0; i < 7; i++) {
+        newData.push((()))
+    }
+    myLineChart.data.datasets[0].data = newData;
+    myLineChart.update();
+}*/
 
 const config = {
     type: 'pie',
@@ -71,13 +84,13 @@ const chart = new Chart(document.getElementById('myChart'),
 
 //Modal 
 // Get the modal
-var modal = document.getElementById("myModal");
+const modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("infoBtn");
+const btn = document.getElementById("infoBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {

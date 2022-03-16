@@ -1,6 +1,6 @@
 
 
-![Moni - Am I Responsive Image](/readme/readme_images/full-logo.webp)
+![Moni](/readme/readme_images/full-logo.webp)
 
 # Cryptocurrency Portfolio Valuation Tool
 
@@ -120,7 +120,7 @@ The majority of initial browser testing was done through Chrome Developer Tools 
 ## Life Cycle & Further Features
 ---
 * Create account to store portfolio information.
-* Add a date purchased and ammount input to further calculate more data including Return on Investment, Profit/Loss, Total Investment.
+* Add a date purchased and amount input to further calculate more data including Return on Investment, Profit/Loss, Total Investment.
 * Increase the number of coins available for portfolio calculation.
 
 ## User Stories - the outcome...

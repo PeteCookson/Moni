@@ -14,7 +14,7 @@
     --secondary-color: #ffffff;
     --font-color: #ffffff;
     --bg-color: #707070;
-    --alt-font-color: rgb(242, 169, 0);
+    --alt-font-color: #F2A900;
     --alt-bg-color: #707070;
 
 }
@@ -236,7 +236,6 @@ input:checked+.slider:before {
     margin: auto;
     padding: 10px;
     border: 0px solid rgba(0, 0, 0, 0.2);
-    /*border: 1px solid #888;*/
     width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
@@ -311,5 +310,9 @@ input:checked+.slider:before {
 
     .chart-container {
         padding: 0;
+    }
+
+    .modal-content {
+        width: 50%;
     }
 }
