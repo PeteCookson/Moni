@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #ffffff;
-    --secondary-color: #525252;
+    --secondary-color: #707070;
     --font-color: #424242;
     --bg-color: #fff;
     --heading-color: #292922;
@@ -10,7 +10,7 @@
 }
 
 [data-theme="dark"] {
-    --primary-color: #535353;
+    --primary-color: #424242;
     --secondary-color: #ffffff;
     --font-color: #ffffff;
     --bg-color: #707070;
@@ -113,7 +113,7 @@ li {
     background-color: var(--bg-color);
 }
 
-/*Header*/
+/*------------------ Header*/
 .navbar-brand {
     margin: 0;
 }
@@ -123,21 +123,22 @@ li {
 
 }
 
-/*fa icon*/
+/*------------------ fa icon*/
 .fab,
 .fas {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: black;
     color: var(--secondary-color);
     padding: 5px;
 }
 
 .fa-info {
+    font-size: 1.5rem;
     color: #eb9e3b;
 }
 
 
-/*Toggle switch */
+/*------------------ Toggle switch */
 .theme-switch-wrapper {
     align-items: center;
     margin-bottom: auto;
@@ -197,32 +198,23 @@ input:checked+.slider:before {
     color: #f2a900;
 }
 
-/* Modal */
-/* The Modal (background) */
+/*------------------ Modal */
+
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     padding-top: 100px;
-    /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
 }
 
-/* Modal Header */
+/*------------------ Modal Header */
 .modal-header {
     padding: 2px;
     background-color: #f5cf54;
@@ -230,7 +222,7 @@ input:checked+.slider:before {
     color: white;
 }
 
-/* Modal Content */
+/*------------------ Modal Content */
 .modal-content {
     background-color: var(--alt-bg-color);
     margin: auto;
@@ -242,7 +234,10 @@ input:checked+.slider:before {
     animation-duration: 0.6s;
 }
 
-/* Add Animation */
+/*------------------ Contact Modal */
+
+
+/*------------------ Add Animation */
 @keyframes animatetop {
     from {
         top: -300px;
@@ -255,9 +250,12 @@ input:checked+.slider:before {
     }
 }
 
-/* The Close Button */
-.close {
+/*------------------ The Close Button */
+.close-info,
+.close-contact {
+    width: fit-content;
     color: var(--secondary-color);
+    padding: 0 10px;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -266,12 +264,14 @@ input:checked+.slider:before {
 #infoBtn {
     width: auto;
     border: 0;
-    padding: 10px;
+    padding: 10px 10px 30px;
     background-color: var(--primary-color);
 }
 
-.close:hover,
-.close:focus {
+.close-info:hover,
+.close-info:focus,
+.close-contact:hover,
+.close-contact:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -292,6 +292,21 @@ input:checked+.slider:before {
     padding: 40px;
 }
 
+#contactBtn {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/*--------------------------------------------Chart*/
+.chart-container {
+    padding-top: 1.5rem;
+}
+
+/*.output {
+    padding: 0;
+    
+}*/
 
 /*--------------------------------------------Media Queries*/
 @media screen and (min-width: 768px) {

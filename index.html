@@ -10,6 +10,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="https://kit.fontawesome.com/6e1477af15.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_wSpJUJvKNiw9Tf7UTsCrE");
+        })();
+    </script>
     <title>Moni ~ Crypto Valuation Tool</title>
 
 </head>
@@ -32,27 +38,6 @@
                 <i class="fas fa-solid fa-moon ps-1"></i>
 
             </div>
-
-            <!-- The Modal -->
-
-
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <h3>How to use Moni crypto valuation tool</h3>
-                    </div>
-                    <p>Moni Cryptocurrency Valuation Tool gives a real time view of your crypto assets.</p>
-                    <li>Select and enter the relevant cryptocurrency holdings you own.</li>
-                    <li>Once you have entered all your cryptocurrency holdings press calculate.</li>
-                    <li>The information returned shows the spread of investment and real time current value.</li>
-                </div>
-
-            </div>
         </nav>
         <nav class="row">
             <div class="heading p-0">
@@ -65,6 +50,22 @@
 
     <!-- Trigger/Open The Modal -->
     <button id="infoBtn"><i class="fas fa-solid fa-info"></i></button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-info">&times;</span>
+                <h3>How to use Moni crypto valuation tool</h3>
+            </div>
+            <p>Moni Cryptocurrency Valuation Tool gives a real time view of your crypto assets.</p>
+            <li>Select and enter the relevant cryptocurrency holdings you own.</li>
+            <li>Once you have entered all your cryptocurrency holdings press calculate.</li>
+            <li>The information returned shows the spread of investment and real time current value.</li>
+        </div>
+
+    </div>
 
     <div class="container px-5">
         <div class="row">
@@ -111,7 +112,7 @@
                                     </div>
                                     <h5>OR</h5>-->
                                     <div class="input-group">
-                                        <input id="ethnumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Number Purchased">
+                                        <input id="ethnumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
                                 </form>
                             </div>
@@ -137,7 +138,7 @@
                                     </div>
                                     <h5>OR</h5>-->
                                     <div class="input-group">
-                                        <input id="bnbnumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Number Purchased">
+                                        <input id="bnbnumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
                                 </form>
                             </div>
@@ -163,7 +164,7 @@
                                     </div>
                                     <h5>OR</h5>-->
                                     <div class="input-group">
-                                        <input id="adanumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Number Purchased">
+                                        <input id="adanumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
                                 </form>
                             </div>
@@ -189,7 +190,7 @@
                                     </div>
                                     <h5>OR</h5>-->
                                     <div class="input-group">
-                                        <input id="solnumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Number Purchased">
+                                        <input id="solnumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
                                 </form>
                             </div>
@@ -215,7 +216,7 @@
                                     </div>
                                     <h5>OR</h5>-->
                                     <div class="input-group">
-                                        <input id="lunanumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Number Purchased">
+                                        <input id="lunanumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
                                 </form>
                             </div>
@@ -225,24 +226,45 @@
                 <button id="calculateButton" onclick=coinValue()>Calculate</button>
             </div>
 
-            <div class="chart-container  col-sm-6 py-4">
+            <div class="chart-container  col-sm-6">
                 <canvas id="myChart"></canvas>
-                <h4>CURRENT VALUE <span id="current-value"></span></h4>
-                <h4>TOTAL HOLDINGS<span id="total-holdings"></span></h4>
-                <h4>TOTAL INVESTMENT<span id="total-investment"></span></h4>
-                <h4>TOTAL PROFIT / LOSS<span id="total-profit-loss"></span></h4>
-                <h4>TOTAL RETURN ON INVESTMENT<span id="total-roi"></span></h4>
-                <h4>MOST PROFITABLE<span id="most-profitable"></span></h4>
-                <h4>LEAST PROFITABLE<span id="least-profitable"></span></h4>
+                <div class="output">
+                    <h4>CURRENT VALUE <span id="current-value"></span></h4>
+                    <!--<h4>TOTAL HOLDINGS<span id="total-holdings"></span></h4>
+                    <h4>TOTAL INVESTMENT<span id="total-investment"></span></h4>
+                    <h4>TOTAL PROFIT / LOSS<span id="total-profit-loss"></span></h4>
+                    <h4>TOTAL RETURN ON INVESTMENT<span id="total-roi"></span></h4>
+                    <h4>MOST PROFITABLE<span id="most-profitable"></span></h4>
+                    <h4>LEAST PROFITABLE<span id="least-profitable"></span></h4>-->
+                </div>
+            </div>
+
+        </div>
+        <!--Footer-->
+        <!--Contact form modal-->
+        <div id="contactModal" class="modal">
+            <div class="container modal-content">
+                <span class="close-contact">&times;</span>
+                <form onsubmit="sendMail(this); " id="contactForm" class="row">
+                    <div class="col-sm-5">
+                        <input type="text" name="name" class="form-control" placeholder="Your name..." required>
+                    </div>
+                    <div class="col-sm-7">
+                        <input type="email" name="email" class="form-control" placeholder="Your email..." required>
+                    </div>
+                    <div class="textarea-label row">
+                        <div class="col-sm">
+                            <textarea rows="5" name="message" class="form-control" placeholder="Your message..." required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-secondary center-block">Send Enquiry</button>
+                </form>
             </div>
         </div>
-
-
-        <!--Footer-->
         <footer class="container">
             <div class="row">
                 <div class="contact-info-email col-6">
-                    <a class="email" href="mailto:pgcookson@gmail.com" target="_blank"><i class="fas fa-solid fa-envelope" aria-hidden="true"></i></a>
+                    <button id="contactBtn"><i class="fas fa-solid fa-envelope" aria-hidden="true"></i></button>
                 </div>
                 <div class="contact-info-github col-6">
                     <a href="https://github.com/PeteCookson" target="_blank"><i class="fab fa-brands fa-github"></i></a>
@@ -254,6 +276,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>

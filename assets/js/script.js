@@ -17,7 +17,7 @@ async function coinValue() {
     let cardano = parseInt(document.getElementById("adanumber").value * coinData.cardano.usd);
     let solana = parseInt(document.getElementById("solnumber").value * coinData.solana.usd);
     let luna = parseInt(document.getElementById("lunanumber").value * coinData['terra-luna'].usd);
-    document.getElementById("current-value").innerText = '$' + (bitcoin + ethereum + binance + cardano + solana + luna).toLocaleString() + '.00 USD';
+    document.getElementById("current-value").innerText = '$' + (bitcoin + ethereum + binance + cardano + solana + luna).toLocaleString() + '.00USD';
 }
 
 // Wait for the Dom to finish loading 
@@ -82,30 +82,35 @@ const chart = new Chart(document.getElementById('myChart'),
 );
 
 
-//Modal 
-// Get the modal
+//Info Modal 
 const modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
 const btn = document.getElementById("infoBtn");
-
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
+const span = document.getElementsByClassName("close-info")[0];
 btn.onclick = function() {
     modal.style.display = "block";
 }
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+    }
+}
+
+//Contact Modal 
+const contactModal = document.getElementById("contactModal");
+const contactBtn = document.getElementById("contactBtn");
+const contactSpan = document.getElementsByClassName("close-contact")[0];
+contactBtn.onclick = function() {
+    contactModal.style.display = "block";
+}
+contactSpan.onclick = function() {
+    contactModal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == contactModal) {
+        contactModal.style.display = "none";
     }
 }
 
@@ -119,35 +124,4 @@ function switchTheme(e) {
         document.documentElement.setAttribute('data-theme', 'light');
     }
 }
-
 toggleSwitch.addEventListener('change', switchTheme, false);
-
-
-/*function currentValue() {
-    document.getElementById("c-v").innerText = userInput * logCoins;
-
-}
-
-function totalHoldings() {
-
-}
-
-function totalInvestment() {
-
-}
-
-function totalProfitLoss() {
-
-}
-
-function totalRoi() {
-
-}
-
-function mostProfitable() {
-    
-}
-
-function leastProfitable() {
-
-}*/
