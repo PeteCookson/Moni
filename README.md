@@ -63,9 +63,10 @@ Features included in this Project
 
 * Direct user input and live crypto prices used for accurate portfolio calculation.
 * Pie chart used to visually represent current holding values.
-* Addtional information based on calculations showing current value, total holdings, R.O.I, most/least profitable, and total profit/loss.
+* Addtional information based on calculations the showing current value.
 * Dark mode toggle to reduce eye strain and improve battery life.
 * Information modal provding basic steps to using Moni.
+* Contact option via email using client-side technology.
 
 ## Structure Plane
 ---
@@ -75,14 +76,22 @@ Layout of the page is simple and allows immediate interaction, buttons are clear
 ## Skeleton Plane
 ---
 The design has been focused on mobile first, while also being responsive to larger screens. The website was designed to allow immediate interaction and to be appropriate to the intended audience.
-[Click here](readme/readme_images/wireframe.webp) to view the Wireframe
+
+![mobile](readme/readme_images/mobile-wireframe.webp)
+ ![desktop](readme/readme_images/desktop-wireframe.webp)
 ## Surface Plane
 ---
-[Responsive mockup](/readme/readme_images/mockup.png)
+![Responsive mockup](/readme/readme_images/mockup.png)
 
-The palette and font used for the site is complementary to the design and uses minimal color and style variations for visual identity.
-* Color palette
-* Fonts
+The palette and fonts used for the site is complementary to the design and uses minimal color and style variations for visual identity.
+## Light mode Colors
+![Moni](readme/readme_images/light-mode.webp)
+## Dark mode Colors
+![Moni](readme/readme_images/dark-mode.webp)
+
+## Fonts
+* Baloo Tamma 2 regular - Logo
+* Raleway - body text
 
 ## Technologies used
 ---
@@ -106,10 +115,10 @@ The palette and font used for the site is complementary to the design and uses m
 * 
 
 ### Content
-* [Dark Mode](https://dev.to/)
-* [Modal](https://www.w3schools.com/)
-* [Pricing API](https://coingecko.com/en/api)
-* [Chart](https://www.chartjs.org/)
+* [Dark Mode](https://dev.to/)dev.to
+* [Modal](https://www.w3schools.com/)www.w3schools.com
+* [Pricing API](https://coingecko.com/en/api)coingecko.com
+* [Chart](https://www.chartjs.org/)www.chartjs.org
 ## Testing
 ---
 The majority of initial browser testing was done through Chrome Developer Tools and Safari's Inspect Elements.
