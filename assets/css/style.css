@@ -133,9 +133,24 @@ li {
     padding: 5px;
 }
 
-.fa-info {
+
+.fa-info:hover,
+.fa-info:hover {
+    padding: 10px;
     font-size: 1.5rem;
     color: #eb9e3b;
+    background-color: #fff;
+    border: 2px solid #eb9e3b;
+    border-radius: 0.5rem;
+}
+
+.fa-info {
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #eb9e3b;
+    border: 2px solid #eb9e3b;
+    border-radius: 0.5rem;
 }
 
 
