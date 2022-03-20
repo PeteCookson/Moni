@@ -124,6 +124,8 @@ The palette and fonts used for the site is complementary to the design and uses 
 The majority of initial browser testing was done through Chrome Developer Tools and Safari's Inspect Elements.
 ## Bugs
 ---
+* Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.
+
 ## Responsiveness
 ---
 ## Life Cycle & Further Features

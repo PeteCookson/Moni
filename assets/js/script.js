@@ -18,6 +18,14 @@ async function coinValue() {
     let solana = parseInt(document.getElementById("solnumber").value * coinData.solana.usd);
     let luna = parseInt(document.getElementById("lunanumber").value * coinData['terra-luna'].usd);
     document.getElementById("current-value").innerText = '$' + (bitcoin + ethereum + binance + cardano + solana + luna).toLocaleString() + '.00USD';
+    return {
+        bitcoin,
+        ethereum,
+        binance,
+        cardano,
+        solana,
+        luna,
+    };
 }
 
 // Wait for the Dom to finish loading 
@@ -29,11 +37,12 @@ document.getElementById("calculateButton").addEventListener("click", function() 
 })
 
 /* Chart.js */
+
 const data = {
     labels: ['BITCOIN', 'ETHEREUM', 'BINANCE', 'CARDANO', 'SOLANA', 'LUNA'],
     datasets: [{
         label: 'current value',
-        data: [70, 40, 36, 48, 50, 56],
+        data: [50, 50, 50, 50, 50, 50],
 
         backgroundColor: [
             'rgb(242, 169, 0)',
@@ -46,41 +55,29 @@ const data = {
     }]
 };
 
-function updateData() {
-    data.data.datasets[0].data = coinValue;
-    data.update();
-
-    /*function addData(chart, label, data) {
-        chart.data.labels.push(label);
-        chart.data.datasets.forEach((dataset) => {
-            dataset.data.push(data);
-        });
-        chart.update();*/
-}
-/*function RandomData() {
-    var newData = [];
-    for (var i = 0; i < 7; i++) {
-        newData.push((()))
-    }
-    myLineChart.data.datasets[0].data = newData;
-    myLineChart.update();
-}*/
-
 const config = {
     type: 'pie',
     data: data,
     options: {
+        responsive: true,
         plugins: {
             legend: {
                 display: false
-            }
+            },
         }
-    }
+    },
 };
+
 const chart = new Chart(document.getElementById('myChart'),
     config
 );
 
+async function updateData() { //convert to an async function
+    const data = await coinValue(); //get the coin values
+    const values = Object.keys(data).map(key => data[key]); //convert the object to an array of values
+    config.data.datasets[0].data = values; //passing the array of values to the config object
+    chart.update(); //update the chart
+}
 
 //Info Modal 
 const modal = document.getElementById("myModal");
@@ -92,11 +89,6 @@ btn.onclick = function() {
 span.onclick = function() {
     modal.style.display = "none";
 }
-/*window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}*/
 
 //Contact Modal 
 const contactModal = document.getElementById("contactModal");
@@ -107,11 +99,6 @@ contactBtn.onclick = function() {
 }
 contactSpan.onclick = function() {
     contactModal.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == contactModal) {
-        contactModal.style.display = "none";
-    }
 }
 
 // Toggle
