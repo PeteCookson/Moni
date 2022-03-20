@@ -252,6 +252,7 @@ input:checked+.slider:before {
 
 /*------------------ Contact Modal */
 .mail-form-control {
+    margin: 5px 0px;
     border: none;
     border-radius: 0.25rem;
     background-color: var(--bg-color);
@@ -278,7 +279,7 @@ input:checked+.slider:before {
 
 .textarea-label {
     margin: auto;
-    padding: 20px 0 20px;
+    padding: 5px 0 20px;
 }
 
 .submitButton {
