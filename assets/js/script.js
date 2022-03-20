@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {});
 document.getElementById("calculateButton").addEventListener("click", function() {
     coinValue();
     updateData();
-})
+});
 
 /* Chart.js */
 
@@ -85,10 +85,10 @@ const btn = document.getElementById("infoBtn");
 const span = document.getElementsByClassName("close-info")[0];
 btn.onclick = function() {
     modal.style.display = "block";
-}
+};
 span.onclick = function() {
     modal.style.display = "none";
-}
+};
 
 //Contact Modal 
 const contactModal = document.getElementById("contactModal");
@@ -96,10 +96,10 @@ const contactBtn = document.getElementById("contactBtn");
 const contactSpan = document.getElementsByClassName("close-contact")[0];
 contactBtn.onclick = function() {
     contactModal.style.display = "block";
-}
+};
 contactSpan.onclick = function() {
     contactModal.style.display = "none";
-}
+};
 
 // Toggle
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');

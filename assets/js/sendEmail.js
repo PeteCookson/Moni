@@ -4,13 +4,22 @@ function sendMail(contactForm) {
             "from_email": contactForm.email.value,
             "information_request": contactForm.message.value
         })
-        .then(
+        .then(function(response) {
+            console.log('SUCCESS!', response);
+            alert("Message Sent!");
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert("There was an error");
+        });
+
+    /*.then(
             function(response) {
                 console.log("SUCCESS", response);
                 alert("Message Sent!");
             },
             function(error) {
                 console.log("FAILED", error);
+                alert("There was an error");
             });
-    return false;
+    return false;*/
 }
