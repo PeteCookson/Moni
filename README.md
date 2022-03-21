@@ -1,6 +1,6 @@
 
 
-![Moni](/readme/readme_images/full-logo.webp)
+![Moni](/readme/readme_images/logo-light.webp)
 
 # Cryptocurrency Portfolio Valuation Tool
 
