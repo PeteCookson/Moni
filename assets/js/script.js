@@ -16,21 +16,20 @@ async function coinValue() {
     let binance = parseInt(document.getElementById("bnbnumber").value * coinData.binancecoin.usd);
     let cardano = parseInt(document.getElementById("adanumber").value * coinData.cardano.usd);
     let solana = parseInt(document.getElementById("solnumber").value * coinData.solana.usd);
-    let luna = parseInt(document.getElementById("lunanumber").value * coinData['terra-luna'].usd);
-    document.getElementById("current-value").innerText = '$' + (bitcoin + ethereum + binance + cardano + solana + luna).toLocaleString() + '.00USD';
+    let luna = parseInt(document.getElementById("lunanumber").value * coinData["terra-luna"].usd);
+    document.getElementById("current-value").innerText = "$" + (bitcoin + ethereum + binance + cardano + solana + luna).toLocaleString() + ".00USD";
     return {
         bitcoin,
         ethereum,
         binance,
         cardano,
         solana,
-        luna,
+        luna
     };
 }
 
 // Wait for the Dom to finish loading 
 document.addEventListener("DOMContentLoaded", function() {});
-// 
 document.getElementById("calculateButton").addEventListener("click", function() {
     coinValue();
     updateData();
