@@ -8,6 +8,7 @@ This website is designed and created for the Interactive Frontend Development Mi
 
 Moni - Cryptocurrency Portfolio Valution Tool is a digital currency calculator built to quickly calculate the value of crypto assets.
 
+![Responsive mockup](/readme/readme_images/mockup.png)
 
 [Enter the site](https://petecookson.github.io/moni/)
 
@@ -81,17 +82,25 @@ The design has been focused on mobile first, while also being responsive to larg
  ![desktop](readme/readme_images/desktop-wireframe.webp)
 ## Surface Plane
 ---
-![Responsive mockup](/readme/readme_images/mockup.png)
 
 The palette and fonts used for the site is complementary to the design and uses minimal color and style variations for visual identity.
 ## Light mode Colors
 ![Moni](readme/readme_images/light-mode.webp)
 ## Dark mode Colors
 ![Moni](readme/readme_images/dark-mode.webp)
+## Chart Colors
+Colors for the chart were chosen based on the main color for the logos of the representative cryptocurrency.
+
+![Chart](readme/readme_images/chart.webp)
 
 ## Fonts
-* Baloo Tamma 2 regular - Logo
-* Raleway - body text
+Google Fonts was used to import the selected fonts.
+* Baloo Tamma 2 regular - Used for the logo.
+
+![Logo](readme/readme_images/baloo.webp)
+* Raleway - Used for headings and body text.
+
+![body](readme/readme_images/raleway.webp)
 
 ## Technologies used
 ---
@@ -112,7 +121,6 @@ The palette and fonts used for the site is complementary to the design and uses 
 * [W3schools](https://www.w3schools.com/)
 * [Stackoverflow](https://stackoverflow.com/)
 * [Slack](https://slack.com/intl/en-gb/)
-* 
 
 ### Content
 * [Dark Mode](https://dev.to/)dev.to
@@ -125,6 +133,7 @@ The majority of initial browser testing was done through Chrome Developer Tools 
 ## Bugs
 ---
 * Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.
+* Bug with sending email from the contact modal: safari deployed and remote server sends after "There was an error" alert is closed, chrome sends after second attempt
 
 ## Responsiveness
 ---
