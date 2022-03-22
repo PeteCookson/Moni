@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moni Cryptocurrency Valuation Tool gives a real time view of your crypto assets.">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="https://kit.fontawesome.com/6e1477af15.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!--EmailJS-->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         (function() {
@@ -17,8 +22,8 @@
         })();
     </script>
     <title>Moni ~ Crypto Valuation Tool</title>
-
 </head>
+<!--Logo-->
 
 <body class="light-theme">
     <header class="container-fluid">
@@ -36,7 +41,6 @@
                     <span class="slider round"></span>
                 </label>
                 <i class="fas fa-solid fa-moon ps-1"></i>
-
             </div>
         </nav>
         <nav class="row">
@@ -48,45 +52,31 @@
         </nav>
     </header>
 
-    <!-- Trigger/Open The Modal -->
-    <button id="infoBtn"><i class="fas fa-solid fa-info"></i></button>
-    <!-- The Modal -->
+    <button id="infoBtn" aria-label="Information"><i class="fas fa-solid fa-info"></i></button>
+    <!--Information Modal-->
     <div id="myModal" class="modal">
-
-        <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close-info">&times;</span>
-                <h3>How to use Moni crypto valuation tool</h3>
+                <h4>How to use Moni crypto valuation tool</h4>
             </div>
             <p>Moni Cryptocurrency Valuation Tool gives a real time view of your crypto assets.</p>
-            <p>Select and enter the relevant cryptocurrency holdings you own.</p>
-            <p>Once you have entered all your cryptocurrency holdings press calculate.</p>
-            <p>The information returned shows the spread of investment and real time current value.</p>
+            <p>• Select and enter the relevant cryptocurrency holdings you own.</p>
+            <p>• Once you have entered all your cryptocurrency holdings press calculate.</p>
+            <p>• The information returned shows the spread of investment and real time current value.</p>
         </div>
-
     </div>
-
     <div class="container px-5">
         <div class="row">
+            <!--Coin Input-->
             <div class="col-sm-6">
-
                 <div id="accordion">
                     <div class="card coin-input">
                         <a class="collapsed btn" data-bs-toggle="collapse" role="button" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><img src="assets/images/Bitcoin.webp" alt="Bitcoin Logo" style="width: 30px"></a>
-                        <h4>BITCOIN</h4>
+                        <h3>BITCOIN</h3>
                         <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
-                                <!--<form>
-                                    <div class="input-group">
-                                        <input type="date" class="form-control" placeholder="Purchase Date" id=“btcDate”>
-                                    </div>
-                                </form>-->
                                 <form>
-                                    <!--<div class="input-group">
-                                        <input id="btcCost" type="number" class="form-control" min="0.01" step="0.01" placeholder="Purchase Amount &dollar;(USD)" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency">
-                                    </div>
-                                    <h5>OR</h5>-->
                                     <div class="input-group">
                                         <input id="btcnumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
@@ -94,22 +84,12 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card coin-input">
                         <a class="collapsed btn" data-bs-toggle="collapse" role="button" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><img src="assets/images/ethereum.webp" alt="Ethereum Logo" style="width: 30px"></a>
-                        <h4>ETHEREUM</h4>
+                        <h3>ETHEREUM</h3>
                         <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
                                 <form>
-                                    <!--<div class="input-group">
-                                        <input type="date" class="form-control" placeholder="Purchase Date">
-                                    </div>
-                                </form>
-                                <form>
-                                    <div class="input-group">
-                                        <input id="purchaseamount" type="number" class="form-control" min="0.01" step="0.01" placeholder="Purchase Amount">
-                                    </div>
-                                    <h5>OR</h5>-->
                                     <div class="input-group">
                                         <input id="ethnumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
@@ -119,19 +99,10 @@
                     </div>
                     <div class="card coin-input">
                         <a class="collapsed btn" data-bs-toggle="collapse" role="button" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><img src="assets/images/binance.webp" alt="Binance Logo" style="width: 30px"></a>
-                        <h4>BINANCE</h4>
+                        <h3>BINANCE</h3>
                         <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
                                 <form>
-                                    <!--<div class="input-group">
-                                        <input type="date" class="form-control" placeholder="Purchase Date">
-                                    </div>
-                                </form>
-                                <form>
-                                    <div class="input-group">
-                                        <input id="purchaseamount" type="number" class="form-control" min="0.01" step="0.01" placeholder="Purchase Amount">
-                                    </div>
-                                    <h5>OR</h5>-->
                                     <div class="input-group">
                                         <input id="bnbnumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
@@ -141,19 +112,10 @@
                     </div>
                     <div class="card coin-input">
                         <a class="collapsed btn" data-bs-toggle="collapse" role="button" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><img src="assets/images/Cardano.webp" alt="Cardano Logo" style="width: 30px"></a>
-                        <h4>CARDANO</h4>
+                        <h3>CARDANO</h3>
                         <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
                                 <form>
-                                    <!--<div class="input-group">
-                                        <input type="date" class="form-control" placeholder="Purchase Date">
-                                    </div>
-                                </form>
-                                <form>
-                                    <div class="input-group">
-                                        <input id="purchaseamount" type="number" class="form-control" min="0.01" step="0.01" placeholder="Purchase Amount">
-                                    </div>
-                                    <h5>OR</h5>-->
                                     <div class="input-group">
                                         <input id="adanumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
@@ -161,23 +123,12 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card coin-input">
-
                         <a class="collapsed btn" data-bs-toggle="collapse" role="button" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"><img src="assets/images/solana.webp" alt="Solana Logo" style="width: 30px"></a>
-                        <h4>SOLANA</h4>
+                        <h3>SOLANA</h3>
                         <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
                                 <form>
-                                    <!--<div class="input-group">
-                                        <input type="date" class="form-control" placeholder="Purchase Date">
-                                    </div>
-                                </form>
-                                <form>
-                                    <div class="input-group">
-                                        <input id="purchaseamount" type="number" class="form-control" min="0.01" step="0.01" placeholder="Purchase Amount">
-                                    </div>
-                                    <h5>OR</h5>-->
                                     <div class="input-group">
                                         <input id="solnumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
@@ -187,19 +138,10 @@
                     </div>
                     <div class="card coin-input">
                         <a class="collapsed btn" data-bs-toggle="collapse" role="button" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix"><img src="assets/images/luna.webp" alt="Terra Luna Logo" style="width: 30px"></a>
-                        <h4>TERRA LUNA</h4>
+                        <h3>TERRA LUNA</h3>
                         <div id="collapseSix" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
                                 <form>
-                                    <!--<div class="input-group">
-                                        <input type="date" class="form-control" placeholder="Purchase Date">
-                                    </div>
-                                </form>
-                                <form>
-                                    <div class="input-group">
-                                        <input id="purchaseamount" type="number" class="form-control" min="0.01" step="0.01" placeholder="Purchase Amount">
-                                    </div>
-                                    <h5>OR</h5>-->
                                     <div class="input-group">
                                         <input id="lunanumber" onfocus="this.value=''" type="number" class="form-control" placeholder="Coin Holdings 0.00000000">
                                     </div>
@@ -210,27 +152,20 @@
                 </div>
                 <button id="calculateButton" onclick=coinValue()>Calculate</button>
             </div>
-
+            <!--Chart & Output-->
             <div class="chart-container  col-sm-6">
                 <canvas id="myChart"></canvas>
                 <div class="output">
                     <h4>CURRENT VALUE <span id="current-value"></span></h4>
-                    <!--<h4>TOTAL HOLDINGS<span id="total-holdings"></span></h4>
-                    <h4>TOTAL INVESTMENT<span id="total-investment"></span></h4>
-                    <h4>TOTAL PROFIT / LOSS<span id="total-profit-loss"></span></h4>
-                    <h4>TOTAL RETURN ON INVESTMENT<span id="total-roi"></span></h4>
-                    <h4>MOST PROFITABLE<span id="most-profitable"></span></h4>
-                    <h4>LEAST PROFITABLE<span id="least-profitable"></span></h4>-->
                 </div>
             </div>
-
         </div>
         <!--Footer-->
-        <!--Contact form modal-->
+        <!--Email Modal-->
         <div id="contactModal" class="modal">
             <div class="container modal-content">
                 <span class="close-contact">&times;</span>
-                <form onsubmit="sendMail(this); " id="contactForm" class="row">
+                <form id="contactForm" class="row">
                     <div class="col-sm-5">
                         <input type="text" name="name" class="mail-form-control" placeholder="Your name..." required>
                     </div>
@@ -249,19 +184,18 @@
         <footer class="container">
             <div class="row">
                 <div class="contact-info-email col-6">
-                    <button id="contactBtn"><i class="fas fa-solid fa-envelope" aria-hidden="true"></i></button>
+                    <button id="contactBtn" aria-label="Contact"><i class="fas fa-solid fa-envelope" aria-hidden="true"></i></button>
                 </div>
                 <div class="contact-info-github col-6">
-                    <a href="https://github.com/PeteCookson" target="_blank"><i class="fab fa-brands fa-github"></i></a>
+                    <a href="https://github.com/PeteCookson" aria-label="Github" target="_blank"><i class="fab fa-brands fa-github"></i></a>
                 </div>
-
             </div>
         </footer>
+        <!--Bootstap, Chartjs & Script.js-->
         <script src="assets/js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="assets/js/sendEmail.js"></script>
     </div>
 </body>
 
