@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Raleway:wght@100;300&display=swap');
 
+/*------------------Set root colors for Toggle*/
 :root {
     --primary-color: #FFFFFF;
     --secondary-color: #707070;
@@ -50,19 +51,18 @@ h2 {
 }
 
 h3 {
-
-    font-size: 1.5rem;
-    color: var(--font-color);
-    margin: auto;
-}
-
-h4 {
     font-size: 1rem;
     font-family: 'Raleway', 'helvetica';
     font-weight: 300;
     color: var(--font-color);
     margin: auto;
     padding: 5px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: var(--font-color);
+    margin: auto;
 }
 
 h5 {
@@ -93,6 +93,7 @@ li {
     color: var(--font-color);
 }
 
+/*------------------Coin Input*/
 .accordian {
     padding: 0;
 }
@@ -126,14 +127,13 @@ li {
 
 }
 
-/*------------------ fa icon*/
+/*------------------ fa icons*/
 .fab,
 .fas {
     font-size: 1.5rem;
     color: black;
     color: var(--secondary-color);
 }
-
 
 .fa-info:hover,
 .fa-info:hover {
@@ -153,7 +153,6 @@ li {
     border: 2px solid #eb9e3b;
     border-radius: 0.5rem;
 }
-
 
 /*------------------ Toggle switch */
 .theme-switch-wrapper {
@@ -239,7 +238,7 @@ input:checked+.slider:before {
     color: white;
 }
 
-/*------------------ Modal Content */
+/*------------------Information Modal*/
 .modal-content {
     background-color: var(--alt-bg-color);
     margin: auto;
@@ -310,7 +309,7 @@ input:checked+.slider:before {
     }
 }
 
-/*------------------ The Close Button */
+/*------------------ Close Buttons */
 .close-info,
 .close-contact {
     width: fit-content;
