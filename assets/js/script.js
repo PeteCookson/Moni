@@ -36,7 +36,6 @@ document.getElementById("calculateButton").addEventListener("click", function() 
 });
 
 /* Chart.js */
-
 const data = {
     labels: ['BITCOIN', 'ETHEREUM', 'BINANCE', 'CARDANO', 'SOLANA', 'LUNA'],
     datasets: [{
@@ -111,3 +110,24 @@ function switchTheme(e) {
     }
 }
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+// EmailJS
+window.onload = function() {
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        emailjs.send("gmail", "moni", {
+                "from_name": form.name.value,
+                "from_email": form.email.value,
+                "information_request": form.message.value
+            })
+            .then(function() {
+                console.log('SUCCESS!');
+                $('#contactModal').hide();
+                //alert("Message Sent!");
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert("There was an error");
+            });
+    });
+}
