@@ -111,7 +111,7 @@ Google Fonts is used to import the selected fonts.
 * [Bootstrap](https://getbootstrap.com/) Structure and CDN for the website
 * [Google Fonts](https://fonts.google.com/) Fonts
 * [Font Awesome](https://fontawesome.com/) Icons
-* [[adobeXD](https://www.adobe.com/uk/products/xd.html) Logo design
+* [adobeXD](https://www.adobe.com/uk/products/xd.html) Logo design
 * [Squoosh](https://squoosh.app/) Image optimisation
 * [PNG to WEBP](https://convertio.co) PNG conversion
 
