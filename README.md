@@ -165,12 +165,20 @@ User testing was conducted on slack through the #peer-code-review channel and ge
 ### In this development I wanted the new user to:
 * Quickly understand the main purpose of the site.
     - This goal has been acheived with visual communication and a clear header.
+    
+    ![header](readme/readme_images/header.png)
 * Navigate easily and identify relevant assets.
     - Using a single page has meant the navigation process is simplified, identification of the assets is acheived by using the relevant logos.
+    
+    ![logos](readme/readme_images/logos.png)
 * Easily input data and return real time values of cryptocurrencies.
     - Input for the data is simple throught the use of input fields in a accordion, then passed into a function the calculates with fetched API data.
+    
+    ![input-fields](readme/readme_images/input-fields.png)
 * To view a quick and simple visualisation of the value of current assets.
     - This has been acheived by way of a chart that updates when data has been calculated.
+
+    ![chart-update](readme/readme_images/chart-update.png)
 
 ## Version Control
 ---
