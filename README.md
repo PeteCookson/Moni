@@ -89,12 +89,12 @@ The palette and fonts used for the site is complementary to the design and uses 
 ## Dark mode Colors
 ![Moni](readme/readme_images/dark-mode.webp)
 ## Chart Colors
-Colors for the chart were chosen based on the main color for the logos of the representative cryptocurrency.
+Colors for the chart have been chosen based on the main color for the logos of the corresponding cryptocurrency.
 
 ![Chart](readme/readme_images/chart.webp)
 
 ## Fonts
-Google Fonts was used to import the selected fonts.
+Google Fonts is used to import the selected fonts.
 * Baloo Tamma 2 regular - Used for the logo.
 
 ![Logo](readme/readme_images/baloo.webp)
@@ -127,32 +127,50 @@ Google Fonts was used to import the selected fonts.
 * [Modal](https://www.w3schools.com/)www.w3schools.com
 * [Pricing API](https://coingecko.com/en/api)coingecko.com
 * [Chart](https://www.chartjs.org/)www.chartjs.org
+
 ## Testing
 ---
-The majority of initial browser testing was done through Chrome Developer Tools and Safari's Inspect Elements.
+The majority of testing has been ongoing throughout the build using Chrome Developer Tools. The site has been tested on `Safari`, `Google Chrome` and `Firefox` across multiple Apple devices, including iMac, Macbook, iPad, iPhone and Android mobile. All tests have confirmed the site performs as intended, it is visually responsive and has good overall device performance.
+
+## Validation
+---
+* The HTML has been tested with `W3C Markup Validation` and returned the folowing results:
+
+![html-index](readme/readme_images/html-validator.png)
+* The CSS has been tested with `W3C CSS Validator` and returned the following results:
+
+![css](readme/readme_images/css-validator.png)
+
+* `JSHint` has been used to validate the JavaScript and passed with 32 warnings.
+
 ## Bugs
 ---
 * Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.
-* Bug with sending email from the contact modal: safari deployed and remote server sends after "There was an error" alert is closed, chrome sends after second attempt
+After researching this error I have found it has to do with **[GitHub](https://github.blog/changelog/2021-04-27-github-pages-permissions-policy-interest-cohort-header-added-to-all-pages-sites/)** pages.
+* Bug with sending email from the contact modal: Safari browser on deployed site and remote server sends, only after "There was an error" alert is closed.
+This was resolved by referring back to EmailJS documentation, it was apparent the script being used was from outdated course material.
 
-## Responsiveness
+## User Testing
 ---
+User testing was conducted on slack through the #peer-code-review channel and general feedback was positive.
+
 ## Life Cycle & Further Features
 ---
-* Create account to store portfolio information.
-* Add a date purchased and amount input to further calculate more data including Return on Investment, Profit/Loss, Total Investment.
+* Ability to create account to store portfolio information.
+* Add date purchased and amount input, to further calculate more data including Return on Investment, Profit/Loss, Total Investment.
 * Increase the number of coins available for portfolio calculation.
 
 ## User Stories - the outcome...
 ---
 ### In this development I wanted the new user to:
 * Quickly understand the main purpose of the site.
-
+    - This goal has been acheived with visual communication and a clear header.
 * Navigate easily and identify relevant assets.
-
+    - Using a single page has meant the navigation process is simplified, identification of the assets is acheived by using the relevant logos.
 * Easily input data and return real time values of cryptocurrencies.
-
+    - Input for the data is simple throught the use of input fields in a accordion, then passed into a function the calculates with fetched API data.
 * To view a quick and simple visualisation of the value of current assets.
+    - This has been acheived by way of a chart that updates when data has been calculated.
 
 ## Version Control
 ---
@@ -166,9 +184,9 @@ I used **[GitPod](https://gitpod.io/)** as a local repository and IDE and **[Git
 * I was then saving my work and pushing it to GitHub repository to keep it safe
 * The process I used for checking, saving, commiting and pushing it to remote repository is:
     * `git status` for checking and displaying the state of the repository and staging area
-   * `git add . `  for adding work to git
-    * `git commit -m "Commit message" ` used for saving changes
-    * `git push ` used to upload content to a Github
+    * `git add .`  for adding work to git
+    * `git commit -m "Commit message"` used for saving changes
+    * `git push` used to upload content to a Github
 ## Deployment
 ---
 To deploy the website on [GitHub](https://github.com/).
@@ -177,3 +195,13 @@ To deploy the website on [GitHub](https://github.com/).
 3. The website is now published on GitHub Pages and the link is provided on on the same section
 ## Credits
 ---
+### Code
+* Toggle dark / light mode [W3Schools](https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp)  [Academind](https://academind.com/tutorials/adding-dark-mode) [PullRequest](https://www.pullrequest.com/blog/how-to-implement-dark-mode-with-css-js/)
+* Slider switch [W3Schools](https://www.w3schools.com/howto/howto_css_switch.asp)
+* Modals [Bootstrap](https://getbootstrap.com/docs/5.0/components/modal/)
+
+### Acknowledgements
+I would like to acknowledge the following for the assistance in putting this project together.
+* Tutor support
+* Mentors
+* Code Institute Slack channels Project Milestone & Portfolio 2
