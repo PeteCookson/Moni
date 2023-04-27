@@ -6,7 +6,7 @@
 
 This website is designed and created for the Interactive Frontend Development Milestone Project, for Code Institute's Diploma in Web Application Development. 
 
-Moni - Cryptocurrency Portfolio Valution Tool is a digital currency calculator built to quickly calculate the value of crypto assets.
+Moni - Cryptocurrency Portfolio Valuation Tool is a digital currency calculator built to quickly calculate the value of crypto assets.
 
 ![Responsive mockup](/readme/readme_images/mockup.png)
 
